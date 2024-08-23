@@ -2,7 +2,7 @@
 
 namespace WebApp.Controllers
 {
-    public class HomeController : Controller
+    public class CategoriesController : Controller
     {
         public IActionResult Index()
         {
