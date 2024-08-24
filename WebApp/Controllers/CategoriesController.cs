@@ -11,11 +11,19 @@ namespace WebApp.Controllers
             return View(categories);
         }
 
-        public IActionResult Edit([FromRoute]int? id)
+        [HttpGet]
+        public IActionResult Edit(int? id)
         {
             var category = CategoriesRepository.GetCategory(id.HasValue ? id.Value : 0);
 
             return View(category);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Category category)
+        {
+            CategoriesRepository.UpdateCategory(category.CategoryId, category);
+            return RedirectToAction(nameof(Index));
         }
     }
 }
