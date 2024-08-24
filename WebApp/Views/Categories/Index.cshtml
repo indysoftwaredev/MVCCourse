@@ -1,7 +1,7 @@
 ﻿@model List<Category>
 
 @section title {
-    <h3>Categories</h3>
+    <h3>Manage Categories</h3>
 }
 
 @if (Model != null && Model.Count() != 0)
@@ -26,4 +26,7 @@
             }
         </tbody>
     </table>
+    <br />
+
+    <a class="btn btn-primary" asp-controller="categories" asp-action="add">Add</a>
 }
