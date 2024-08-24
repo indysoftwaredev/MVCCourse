@@ -4,7 +4,7 @@
     {
         private static List<Category> _categories = new List<Category>()
         {
-            new Category { CategoryId=1, Description="Beverage", Name="Meat" },
+            new Category { CategoryId=1, Description="Beverage", Name="Beverage" },
             new Category { CategoryId=2, Description="Bakery", Name="Bakery" },
             new Category { CategoryId=3, Description="Meat", Name="Meat"}
         };
