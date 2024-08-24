@@ -32,9 +32,9 @@ namespace WebApp.Controllers
         }
 
         [HttpGet]
-        public IActionResult Add() 
-        { 
-            return View(); 
+        public IActionResult Add()
+        {
+            return View();
         }
 
         [HttpPost]
@@ -47,6 +47,13 @@ namespace WebApp.Controllers
             }
 
             return View(category);
+        }
+
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            CategoriesRepository.DeleteCategory(id);
+            return RedirectToAction(nameof(Index));
         }
     }
 }
