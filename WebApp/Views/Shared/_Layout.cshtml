@@ -20,7 +20,7 @@
                             <a class="nav-link text-dark" href="/home/index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="/Categories/index">Categories</a>
+                            <a class="nav-link text-dark" href="/categories/index">Categories</a>
                         </li>
                     </ul>
                 </div>
@@ -28,7 +28,12 @@
         </nav>
     </header>
     <div class="container">
-        @RenderBody()
+        <div class="pb-3">
+            @RenderSection("title")
+        </div>
+        <div>
+            @RenderBody()
+        </div>
     </div>
 </body>
 </html>
